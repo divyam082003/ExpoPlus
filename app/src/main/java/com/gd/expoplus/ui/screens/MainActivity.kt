@@ -115,6 +115,7 @@ class MainActivity : ComponentActivity() {
                                         amount = amount,
                                         note = note
                                     )
+                                    navController.popBackStack()
                                 },
                                 onBackClick = {
                                     navController.popBackStack()
