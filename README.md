@@ -223,6 +223,6 @@ within a modern Android application.
 
 # 📌 Author
 
-**Tarun**
+**Divyam**
 
 Android Developer | Full Stack Developer | Data Analytics & AI Applications
