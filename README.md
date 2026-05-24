@@ -1,3 +1,45 @@
+
+# 📸 Screenshots
+
+<table>
+  <tr>
+     <td align="center">
+      <img src="screenshots/splash.png" width="250"/>
+      <br/>
+      <b>Splash Screen</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/home.png" width="250"/>
+      <br/>
+      <b>Home Screen</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/add_expense.png" width="250"/>
+      <br/>
+      <b>Add Expense</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img src="screenshots/analytics.png" width="250"/>
+      <br/>
+      <b>Analytics Dashboard</b>
+    </td>
+       <td align="center">
+      <img src="screenshots/analytics_1.png" width="250"/>
+      <br/>
+      <b>Analytics Dashboard</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/manage.png" width="250"/>
+      <br/>
+      <b>Manage Screen</b>
+    </td>
+  </tr>
+</table>
+
+
 # 📊 ExpoPlus —  Expense Tracker
 
 ExpoPlus is a modern Android Expense Tracking application built using **Kotlin** and **Jetpack Compose**, focused on combining:
@@ -42,38 +84,6 @@ into one intelligent finance management platform.
 - Material 3 Design
 - Dark premium theme
 - Custom charts & dashboard cards
-
----
-
-# 📸 Screenshots
-
-> Add screenshots inside a `screenshots/` folder.
-
-## Home Screen
-
-```md
-![Home](screenshots/home.png)
-```
-
-## Add Expense Screen
-
-```md
-![Add Expense](screenshots/add_expense.png)
-```
-
-## Analytics Dashboard
-
-```md
-![Analytics](screenshots/analytics.png)
-```
-
-## Manage Screen
-
-```md
-![Manage](screenshots/manage.png)
-```
-
----
 
 # 🏗️ Tech Stack
 
