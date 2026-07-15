@@ -22,16 +22,16 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBalanceWallet
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Analytics
+import androidx.compose.material.icons.filled.Assistant
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Fastfood
 import androidx.compose.material.icons.filled.Flight
 import androidx.compose.material.icons.filled.LocalHospital
-import androidx.compose.material.icons.filled.ManageAccounts
 import androidx.compose.material.icons.filled.Movie
 import androidx.compose.material.icons.filled.Payments
-import androidx.compose.material.icons.filled.Person4
 import androidx.compose.material.icons.filled.Receipt
 import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ShoppingBag
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -76,7 +76,8 @@ fun HomeScreen(
     onAddClick: () -> Unit,
     onManageClick: () -> Unit,
     onDeleteTransaction: (TransactionEntity) -> Unit,
-    onAnalyticsClick: () -> Unit
+    onAnalyticsClick: () -> Unit,
+    onAssistantClick: () -> Unit
 )
 {
 
@@ -114,10 +115,10 @@ fun HomeScreen(
 
                 actions = {
 
-                    IconButton(onClick = { }) {
+                    IconButton(onClick = onManageClick) {
 
                         Icon(
-                            imageVector = Icons.Default.Person4,
+                            imageVector = Icons.Default.Settings,
                             contentDescription = null,
                             tint = Color.White
                         )
@@ -145,18 +146,18 @@ fun HomeScreen(
 
                         selected = false,
 
-                        onClick = onManageClick,
+                        onClick = onAssistantClick,
 
                         icon = {
 
                             Icon(
-                                Icons.Default.ManageAccounts,
+                                Icons.Default.Assistant,
                                 contentDescription = null
                             )
                         },
 
                         label = {
-                            Text("Manage")
+                            Text("AI Assistant")
                         }
                     )
 

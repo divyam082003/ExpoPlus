@@ -78,4 +78,11 @@ interface TransactionDao {
     """)
     suspend fun getDeletedTransactions():
             List<TransactionEntity>
+
+    @Query("""
+    SELECT * FROM transactions
+    WHERE isDeleted = 0
+    ORDER BY date DESC
+""")
+    suspend fun getAllActiveTransactions(): List<TransactionEntity>
 }

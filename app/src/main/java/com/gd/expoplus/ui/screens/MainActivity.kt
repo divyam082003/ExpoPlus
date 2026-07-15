@@ -14,11 +14,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.gd.expoplus.data.repository.ExpoAssistantRepository
 import com.gd.expoplus.data.repository.SyncStateRepository
 import com.gd.expoplus.data.repository.TransactionRepository
 import com.gd.expoplus.ui.navigation.Screen
 import com.gd.expoplus.ui.theme.ExpoPlusTheme
 import com.gd.expoplus.utils.DatabaseProvider
+import com.gd.expoplus.viewmodel.ExpoAssistantViewModel
+import com.gd.expoplus.viewmodel.ExpoAssistantViewModelFactory
 import com.gd.expoplus.viewmodel.TransactionViewModel
 import com.gd.expoplus.viewmodel.TransactionViewModelFactory
 import kotlinx.coroutines.delay
@@ -53,10 +56,21 @@ class MainActivity : ComponentActivity() {
                     val database = DatabaseProvider.getDatabase(this)
                     val repository = TransactionRepository(database.transactionDao())
                     val syncStateRepository = SyncStateRepository(database.syncStateDao())
+                    val assistantRepository = ExpoAssistantRepository()
 
 
                     val viewModel: TransactionViewModel = viewModel(
                         factory = TransactionViewModelFactory(repository,syncStateRepository)
+                    )
+
+                    val assistantViewModel: ExpoAssistantViewModel = viewModel(
+
+                        factory = ExpoAssistantViewModelFactory(
+
+                            assistantRepository = assistantRepository,
+
+                            transactionRepository = repository
+                        )
                     )
 
                     LaunchedEffect(Unit) {
@@ -93,9 +107,15 @@ class MainActivity : ComponentActivity() {
                                     )
                                 },
 
+                                onAssistantClick = {
+                                    navController.navigate(Screen.ExpoAssistant.route)
+                                },
+
+
                                 onDeleteTransaction = { transaction ->
                                     viewModel.deleteTransaction(transaction)
                                 },
+
                                 onAnalyticsClick = {
 
                                     navController.navigate(
@@ -143,6 +163,16 @@ class MainActivity : ComponentActivity() {
                             AnalyticsScreen(
                                 transactions = transactions,
                                 onBackClick = { navController.popBackStack() }
+                            )
+                        }
+
+                        composable(Screen.ExpoAssistant.route) {
+
+                            ExpoAssistantScreen(
+                                viewModel = assistantViewModel,
+                                onBackClick = {
+                                    navController.popBackStack()
+                                }
                             )
                         }
                     }

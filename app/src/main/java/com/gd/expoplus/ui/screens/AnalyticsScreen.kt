@@ -363,47 +363,6 @@ fun AnalyticsScreen(
                 }
             }
 
-            // insights
-            item {
-
-                Card(
-
-                    colors = CardDefaults.cardColors(
-                        containerColor = Color(0xFF1B2A1B)
-                    ),
-
-                    shape = RoundedCornerShape(24.dp),
-
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-
-                    Column(
-                        modifier = Modifier.padding(20.dp)
-                    ) {
-
-                        Text(
-                            text = "✨ AI Insights",
-                            color = Color(0xFF63E65C),
-                            fontWeight = FontWeight.Bold,
-                            style = MaterialTheme.typography.titleLarge
-                        )
-
-                        Spacer(modifier = Modifier.height(16.dp))
-
-                        Text(
-                            text =
-                                "• Highest spending is on $highestCategory\n\n" +
-                                        "• Average transaction value is ₹${String.format("%.0f", averageExpense)}\n\n" +
-                                        "• Total transactions recorded: $totalTransactions\n\n" +
-                                        "• Monitor spending trends regularly for better savings.",
-
-                            color = Color.White,
-
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                    }
-                }
-            }
 
             // external dashboard
             item {

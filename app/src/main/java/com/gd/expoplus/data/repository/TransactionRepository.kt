@@ -77,4 +77,8 @@ class TransactionRepository(
         dao.markAsSynced(id)
     }
 
+    suspend fun getAllActiveTransactions(): List<TransactionEntity> {
+        return dao.getAllActiveTransactions()
+    }
+
 }
