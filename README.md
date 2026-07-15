@@ -27,9 +27,14 @@
       <b>Analytics Dashboard</b>
     </td>
        <td align="center">
-      <img src="screenshots/analytics_1.png" width="250"/>
+      <img src="screenshots/expo_assistant_1.png" width="250"/>
       <br/>
-      <b>Analytics Dashboard</b>
+      <b>Expo Assistant</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/expo_assistant_2.png" width="250"/>
+      <br/>
+      <b>Expo Assistant</b>
     </td>
     <td align="center">
       <img src="screenshots/manage.png" width="250"/>
