@@ -18,14 +18,14 @@
       <br/>
       <b>Add Expense</b>
     </td>
-  </tr>
-
-  <tr>
     <td align="center">
       <img src="screenshots/analytics.png" width="250"/>
       <br/>
       <b>Analytics Dashboard</b>
     </td>
+  </tr>
+
+  <tr>
        <td align="center">
       <img src="screenshots/expo_assistant_1.png" width="250"/>
       <br/>
